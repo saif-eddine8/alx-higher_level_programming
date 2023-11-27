@@ -24,37 +24,39 @@ class Rectangle:
     """
 
     def __init__(self, width=0, height=0):
+        """ Initialize rectangles """
         self.width = width
         self.height = height
 
 
     @property
     def width(self):
-        """width getter"""
+        """ Getter returns width """
         return self.__width
 
     @width.setter
     def width(self, value):
-        """width setter"""
+        """ setter returns width """
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
         if value < 0:
             raise ValueError("width must be >= 0")
-        self.__width
+        self.__width = value
 
      @property
     def height(self):
-        """height getter"""
+        """ Getter returns height """
         return self.__height
 
     @height.setter
     def height(self, value):
-        """height setter"""
+        """ setter returns height """
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
         if value < 0:
             raise ValueError("height must be >= 0")
-        self.__height
+        self.__height = value
+
     def area(self):
         """ Return width * height """
         return self.__width * self.__height
